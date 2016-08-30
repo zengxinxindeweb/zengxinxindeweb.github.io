@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-30T01:53:12.000Z</updated>
+  <updated>2016-08-30T10:03:40.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,49 +20,80 @@
     <link href="http://yoursite.com/2016/08/29/MAC-hexo-%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2016/08/29/MAC-hexo-搭建/</id>
     <published>2016-08-29T05:24:24.000Z</published>
-    <updated>2016-08-30T01:53:12.000Z</updated>
+    <updated>2016-08-30T10:03:40.000Z</updated>
     
     <content type="html"><![CDATA[<!-- toc -->
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3>
+<p>这是一篇粗略的文章来讲述用Mac搭建Hexo博客于Github上的个人历程， 踩了各种的坑搭起来的，现在写下遇到的一些问题来分享和自己做个笔记，希望能帮大家少踩些坑。</p>
+<center><br><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><br></center>
 
-<pre><code>sudo npm install -g hexo
-</code></pre><a id="more"></a>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3>
+<p> <strong>Node.js</strong><br>直接下载安装就可以<a href="https://nodejs.org/en/%20%E2%80%9CNode.js" target="_blank" rel="external">Node.js官网</a><br><strong>Git</strong><br>MAC电脑自带有😄不用安装.用来将本地Hexo内容克隆到Github上。</p>
+<center><br><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><br></center>
 
-<p>终端cd到一个选定的目录</p>
-<pre><code>cd /**/**
-</code></pre><p>然后</p>
-<pre><code>hexo init blog
-</code></pre><p>blog是建立的文件夹名称。cd到blog文件夹下，执行如下命令，安装npm：</p>
-<pre><code>npm install
-</code></pre><p>执行命令，开启hexo服务器：</p>
-<pre><code>hexo s  或者  hexo server
-</code></pre><p>浏览器中打开网址<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 进行测试！</p>
-<h3 id="修改_config.yml"><a href="#修改_config.yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3>
+<p>安装好上面两个了就可以在终端执行命令</p>
+<blockquote>
+<p> $ sudo npm install -g hexo</p>
+</blockquote>
+<p>输入管理员密码（Mac登录密码）即开始安装 (sudo:linux系统管理指令 -g:全局安装)</p>
+<center><br><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><br></center>
 
-<p>打开命令： <code>vim _config.yml</code><br>修改：</p>
-<pre><code>deploy:
-  type: git
-  repository:https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git
-  branch: master
-</code></pre><p>修改好后esc然后切换小写输入命令：<code>:wq!</code></p>
-<p>清除缓存文件：<code>hexo clean</code></p>
+<p>终端cd到一个想要的目录</p>
+<blockquote>
+<p>  $ cd /<strong>/</strong>  回车<br>你可以CD空格把文件夹直接拉到终端，就能出现文件夹路径了</p>
+</blockquote>
+<p><strong>然后</strong></p>
+<blockquote>
+<p> $ hexo init blog</p>
+</blockquote>
+<p>blog是建立的文件夹名称。cd到blog文件夹下，执行如下命令，安装npm：</p>
+<blockquote>
+<p> $ npm install</p>
+</blockquote>
+<p>执行命令，开启hexo服务器：</p>
+<blockquote>
+<p> $ hexo s  或者  hexo server</p>
+</blockquote>
+<p>浏览器中打开网址<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 进行测试！</p>
+ <center><br> <h3 id="修改_config.yml"><a href="#修改_config.yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3><br> </center>
+
+<p>打开命令： </p>
+<blockquote>
+<p><code>vim _config.yml</code></p>
+</blockquote>
+<p>修改：</p>
+<blockquote>
+<p>   deploy:<br>     type: git<br>     repository:<a href="https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git" target="_blank" rel="external">https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git</a><br>     branch: master</p>
+</blockquote>
+<p>修改好后esc然后切换小写输入命令：</p>
+<blockquote>
+<p><code>:wq!</code></p>
+</blockquote>
+<p>清除缓存文件：</p>
+<blockquote>
+<p><code>hexo clean</code></p>
+</blockquote>
 <p>在blog文件夹目录下执行生成静态页面命令：</p>
-<pre><code>hexo g  或者  generate
-</code></pre><p>在blog文件夹目录下执行配置命令：</p>
-<pre><code>hexo d  或者  hexo deploy
-</code></pre><p>同步生成静态页面与执行配置：<code>hexo d -g</code></p>
-<p>在MAC markdown编辑写文章目录使用ID 自带的不好用- -<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h3 id=<span class="string">"修改_config.yml"</span>&gt;&lt;a href="#修改_config.yml" class="headerlink" title="修改_config.yml"&gt;&lt;/a&gt;修改_config.yml&lt;<span class="regexp">/h3&gt;</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>   hexo g  或者  generate</p>
+</blockquote>
+<p>在blog文件夹目录下执行配置命令：</p>
+<blockquote>
+<p>   hexo d  或者  hexo deploy<br>同步生成静态页面与执行配置：<code>hexo d -g</code></p>
+</blockquote>
+<p>在MAC markdown编辑写文章目录使用ID 自带的不好用- -<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h3 id=<span class="string">"随意"</span>&gt;&lt;a href="#标题就可以" class="headerlink" title="标题"&gt;&lt;/a&gt;标题&lt;<span class="regexp">/h3&gt;</span></div></pre></td></tr></table></figure></p>
+ <center><br><h3 id="万网配置"><a href="#万网配置" class="headerlink" title="万网配置"></a>万网配置</h3><br> </center>
+
+<blockquote>
+<p>| 记录类型 | 主机记录 | 解析线路 | 记录值 |<br>| CNAME |@ |默认 |zengxinxinde.github.io |<br>| CNAME |www|默认 |zengxinxinde.github.io |</p>
+</blockquote>
+<p><em>io后面没有”.”不要加这个”.”</em></p>
 <p><em>边搭建边笔记~</em></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;!-- toc --&gt;
-&lt;h3 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo npm install -g hexo
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这是一篇粗略的文章来讲述用Mac搭建Hexo博客于Github上的个人历程， 踩了各种的坑搭起来的，现在写下遇到的一些问题来分享和自己做个笔记，希望能帮大家少踩些坑。&lt;/p&gt;
+&lt;center&gt;&lt;br&gt;&lt;h3 id=&quot;配置环境&quot;&gt;&lt;a href=&quot;#
     
     </summary>
     
