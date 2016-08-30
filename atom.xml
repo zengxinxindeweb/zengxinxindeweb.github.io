@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>曾鑫博客</title>
+  <subtitle>曾鑫个人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-08-30T01:53:12.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>曾鑫</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MAC hexo 搭建笔记</title>
+    <link href="http://yoursite.com/2016/08/29/MAC-hexo-%E6%90%AD%E5%BB%BA/"/>
+    <id>http://yoursite.com/2016/08/29/MAC-hexo-搭建/</id>
+    <published>2016-08-29T05:24:24.000Z</published>
+    <updated>2016-08-30T01:53:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- toc -->
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3>
+
+<pre><code>sudo npm install -g hexo
+</code></pre><a id="more"></a>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3>
+
+<p>终端cd到一个选定的目录</p>
+<pre><code>cd /**/**
+</code></pre><p>然后</p>
+<pre><code>hexo init blog
+</code></pre><p>blog是建立的文件夹名称。cd到blog文件夹下，执行如下命令，安装npm：</p>
+<pre><code>npm install
+</code></pre><p>执行命令，开启hexo服务器：</p>
+<pre><code>hexo s  或者  hexo server
+</code></pre><p>浏览器中打开网址<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 进行测试！</p>
+<h3 id="修改_config.yml"><a href="#修改_config.yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3>
+
+<p>打开命令： <code>vim _config.yml</code><br>修改：</p>
+<pre><code>deploy:
+  type: git
+  repository:https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git
+  branch: master
+</code></pre><p>修改好后esc然后切换小写输入命令：<code>:wq!</code></p>
+<p>清除缓存文件：<code>hexo clean</code></p>
+<p>在blog文件夹目录下执行生成静态页面命令：</p>
+<pre><code>hexo g  或者  generate
+</code></pre><p>在blog文件夹目录下执行配置命令：</p>
+<pre><code>hexo d  或者  hexo deploy
+</code></pre><p>同步生成静态页面与执行配置：<code>hexo d -g</code></p>
+<p>在MAC markdown编辑写文章目录使用ID 自带的不好用- -<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h3 id=<span class="string">"修改_config.yml"</span>&gt;&lt;a href="#修改_config.yml" class="headerlink" title="修改_config.yml"&gt;&lt;/a&gt;修改_config.yml&lt;<span class="regexp">/h3&gt;</span></div></pre></td></tr></table></figure></p>
+<p><em>边搭建边笔记~</em></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;!-- toc --&gt;
+&lt;h3 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo npm install -g hexo
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="MAC hexo 搭建" scheme="http://yoursite.com/tags/MAC-hexo-%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+</feed>

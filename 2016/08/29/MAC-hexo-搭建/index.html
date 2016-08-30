@@ -74,6 +74,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="曾鑫博客" type="application/atom+xml" />
+
 
 
 
@@ -85,17 +87,20 @@
 
 
 <meta name="description" content="安装hexo
+
 sudo npm install -g hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MAC hexo 搭建笔记">
 <meta property="og:url" content="http://yoursite.com/2016/08/29/MAC-hexo-搭建/index.html">
 <meta property="og:site_name" content="曾鑫博客">
 <meta property="og:description" content="安装hexo
+
 sudo npm install -g hexo">
-<meta property="og:updated_time" content="2016-08-29T08:30:09.000Z">
+<meta property="og:updated_time" content="2016-08-30T01:53:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MAC hexo 搭建笔记">
 <meta name="twitter:description" content="安装hexo
+
 sudo npm install -g hexo">
 
 
@@ -104,11 +109,11 @@ sudo npm install -g hexo">
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: undefined,
       author: 'Author'
     }
   };
@@ -140,7 +145,7 @@ sudo npm install -g hexo">
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -211,11 +216,44 @@ sudo npm install -g hexo">
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            menu.标签
+          </a>
+        </li>
+      
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Suche
+          </a>
+        </li>
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
   
 </nav>
 
@@ -260,7 +298,7 @@ sudo npm install -g hexo">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posté le</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-08-29T13:24:24+08:00" content="2016-08-29">
               2016-08-29
             </time>
@@ -269,13 +307,6 @@ sudo npm install -g hexo">
           
 
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/29/MAC-hexo-搭建/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/29/MAC-hexo-搭建/" itemprop="commentsCount"></span>
-                </a>
-              </span>
             
           
 
@@ -297,10 +328,12 @@ sudo npm install -g hexo">
 
       
         <!-- toc -->
-<p><strong>安装hexo</strong></p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3>
+
 <pre><code>sudo npm install -g hexo
 </code></pre><a id="more"></a>
-<p><strong>初始化</strong></p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3>
+
 <p>终端cd到一个选定的目录</p>
 <pre><code>cd /**/**
 </code></pre><p>然后</p>
@@ -310,7 +343,9 @@ sudo npm install -g hexo">
 </code></pre><p>执行命令，开启hexo服务器：</p>
 <pre><code>hexo s  或者  hexo server
 </code></pre><p>浏览器中打开网址<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 进行测试！</p>
-<p><strong>_config.yml</strong><br>打开命令： <code>vim _config.yml</code><br>修改：</p>
+<h3 id="修改_config.yml"><a href="#修改_config.yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3>
+
+<p>打开命令： <code>vim _config.yml</code><br>修改：</p>
 <pre><code>deploy:
   type: git
   repository:https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git
@@ -322,7 +357,8 @@ sudo npm install -g hexo">
 </code></pre><p>在blog文件夹目录下执行配置命令：</p>
 <pre><code>hexo d  或者  hexo deploy
 </code></pre><p>同步生成静态页面与执行配置：<code>hexo d -g</code></p>
-<p>边搭建边笔记~</p>
+<p>在MAC markdown编辑写文章目录使用ID 自带的不好用- -<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h3 id=<span class="string">"修改_config.yml"</span>&gt;&lt;a href="#修改_config.yml" class="headerlink" title="修改_config.yml"&gt;&lt;/a&gt;修改_config.yml&lt;<span class="regexp">/h3&gt;</span></div></pre></td></tr></table></figure></p>
+<p><em>边搭建边笔记~</em></p>
 
       
     </div>
@@ -370,11 +406,23 @@ sudo npm install -g hexo">
 
 
           
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zengxinxinde"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/08/29/MAC-hexo-搭建/"
-           data-title="MAC hexo 搭建笔记" data-url="http://yoursite.com/2016/08/29/MAC-hexo-搭建/">
-      </div>
     
   </div>
 
@@ -399,10 +447,10 @@ sudo npm install -g hexo">
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Des Matières
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Ensemble
+            Übersicht
           </li>
         </ul>
       
@@ -419,7 +467,7 @@ sudo npm install -g hexo">
           <div class="site-state-item site-state-posts">
             <a href="/">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">articles</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -429,13 +477,20 @@ sudo npm install -g hexo">
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -457,7 +512,7 @@ sudo npm install -g hexo">
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改_config.yml"><span class="nav-number">3.</span> <span class="nav-text">修改_config.yml</span></a></li></ol></div>
             
           </div>
         </section>
@@ -484,11 +539,11 @@ sudo npm install -g hexo">
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Thème -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
@@ -571,36 +626,144 @@ sudo npm install -g hexo">
 
   
 
-  
-    
+
+
   
 
+
+
+
+  
+  
   <script type="text/javascript">
-    var duoshuoQuery = {short_name:"zengxinxinde"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
   </script>
 
-  
-    
-    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
-
-
-  
-  
 
   
 
