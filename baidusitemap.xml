@@ -3,23 +3,26 @@
 
 
     
-    
   <url>
     <loc>http://yoursite.com/2016/08/29/%E6%90%AD%E5%BB%BAhexo/</loc>
-    <lastmod>2016-08-31T01:48:02.000Z</lastmod>
+    <lastmod>2016-08-31T08:14:48.000Z</lastmod>
     <data>
         <display>
         <title>MAC hexo 搭建笔记</title>
         <pubTime>2016-08-29T05:24:24.000Z</pubTime>
         
-        <tag>MAC hexo 搭建</tag>
+        <tag>hexo+git搭建笔记</tag>
          
          
            
+             
+              <breadCrumb title="搭建笔记" url="http://yoursite.com/categories/%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/"/>
+          
         </display>
     </data>
     </url>
 
+    
     
     
     
