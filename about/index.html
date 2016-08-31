@@ -115,11 +115,11 @@ E-mail：@曾鑫">
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Muse',
-    sidebar: {"position":"right","display":"post"},
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: undefined,
+      userId: 0,
       author: '博主'
     }
   };
@@ -157,7 +157,7 @@ E-mail：@曾鑫">
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -171,7 +171,7 @@ E-mail：@曾鑫">
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">曾鑫个人博客</p>
+  <p class="site-subtitle">风轻云淡 --  不要放羊 ,,Ծ‸Ծ,,</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -298,22 +298,6 @@ E-mail：@曾鑫">
 
 
           
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"zengxinxinde"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
   <div class="comments" id="comments">
     
   </div>
@@ -344,7 +328,7 @@ var duoshuoQuery = {short_name:"zengxinxinde"};
                src="/images/avatar.gif"
                alt="曾鑫" />
           <p class="site-author-name" itemprop="name">曾鑫</p>
-          <p class="site-description motion-element" itemprop="description">学习总结 思考感悟 知识管理</p>
+          <p class="site-description motion-element" itemprop="description">风轻云淡 --  不要放羊 ,,Ծ‸Ծ,,</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -431,7 +415,7 @@ var duoshuoQuery = {short_name:"zengxinxinde"};
 </div>
 
 <div class="powered-by">
-  发动机由 <a class="theme-link" href="https://hexo.io">Hexo</a>提供 
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
