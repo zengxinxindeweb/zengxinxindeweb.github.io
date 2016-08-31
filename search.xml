@@ -5,12 +5,15 @@
     
     <entry>
       <title><![CDATA[MAC hexo 搭建笔记]]></title>
-      <url>http://yoursite.com/2016/08/29/MAC-hexo-%E6%90%AD%E5%BB%BA/</url>
+      <url>http://yoursite.com/2016/08/29/%E6%90%AD%E5%BB%BAhexo/</url>
       <content type="html"><![CDATA[<!-- toc -->
 <p>这是一篇粗略的文章来讲述用Mac搭建Hexo博客于Github上的个人历程， 踩了各种的坑搭起来的，现在写下遇到的一些问题来分享和自己做个笔记，希望能帮大家少踩些坑。</p>
+<center><br>先行感谢<a href="http://baixin.io/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">@潘柏信</a>的搭建教程<br></center>
+
+<a id="more"></a>
 <center><br><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><br></center>
 
-<p> <strong>Node.js</strong><br>直接下载安装就可以<a href="https://nodejs.org/en/%20%E2%80%9CNode.js" target="_blank" rel="external">Node.js官网</a><br><strong>Git</strong><br>MAC电脑自带有😄不用安装.用来将本地Hexo内容克隆到Github上。</p>
+<p> <strong>Node.js</strong><br>直接下载安装就可以<a href="https://nodejs.org/en/%20%E2%80%9CNode.js" target="_blank" rel="external">Node.js官网</a><br><strong>Git</strong><br>MAC电脑自带有😄 不用安装.用来将本地Hexo内容克隆到Github上。</p>
 <center><br><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><br></center>
 
 <p>安装好上面两个了就可以在终端执行命令</p>
@@ -22,8 +25,9 @@
 
 <p>终端cd到一个想要的目录</p>
 <blockquote>
-<p>  $ cd /<strong>/</strong>  回车<br>你可以CD空格把文件夹直接拉到终端，就能出现文件夹路径了</p>
+<p>  $ cd /xx/xx 回车     </p>
 </blockquote>
+<p>*你可以CD空格把文件夹直接拉到终端，就能出现文件夹路径了</p>
 <p><strong>然后</strong></p>
 <blockquote>
 <p> $ hexo init blog</p>
@@ -39,15 +43,17 @@
 <p>浏览器中打开网址<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 进行测试！</p>
  <center><br> <h3 id="修改_config.yml"><a href="#修改_config.yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3><br> </center>
 
+<p>cd到blog目录</p>
 <p>打开命令： </p>
 <blockquote>
 <p><code>vim _config.yml</code></p>
 </blockquote>
 <p>修改：</p>
-<blockquote>
-<p>   deploy:<br>     type: git<br>     repository:<a href="https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git" target="_blank" rel="external">https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git</a><br>     branch: master</p>
-</blockquote>
-<p>修改好后esc然后切换小写输入命令：</p>
+<pre><code>deploy:
+  type: git
+  repository:https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git
+  branch: master
+</code></pre><p>修改好后esc然后切换小写输入命令：</p>
 <blockquote>
 <p><code>:wq!</code></p>
 </blockquote>
@@ -63,13 +69,25 @@
 <blockquote>
 <p>   hexo d  或者  hexo deploy<br>同步生成静态页面与执行配置：<code>hexo d -g</code></p>
 </blockquote>
-<p>在MAC markdown编辑写文章目录使用ID 自带的不好用- -<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h3 id=<span class="string">"随意"</span>&gt;&lt;a href="#标题就可以" class="headerlink" title="标题"&gt;&lt;/a&gt;标题&lt;<span class="regexp">/h3&gt;</span></div></pre></td></tr></table></figure></p>
- <center><br><h3 id="万网配置"><a href="#万网配置" class="headerlink" title="万网配置"></a>万网配置</h3><br> </center>
+<center><br><h3 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h3><br></center>
+
+<p>在MAC markdown编辑写文章目录使用ID 自带的不好用- -<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h3 id=“标题”&gt;&lt;a href="#标题" class="headerlink" title="标题"&gt;&lt;/a&gt;标题&lt;<span class="regexp">/h3&gt;</span></div></pre></td></tr></table></figure></p>
+<p>想给文章不显示全文的话可以在自己想要设置的地方添加</p>
+<pre><code>&lt;!— more --&gt;
+</code></pre> <center><br><h3 id="万网配置"><a href="#万网配置" class="headerlink" title="万网配置"></a>万网配置</h3><br> </center>
 
 <blockquote>
 <p>| 记录类型 | 主机记录 | 解析线路 | 记录值 |<br>| CNAME |@ |默认 |zengxinxinde.github.io |<br>| CNAME |www|默认 |zengxinxinde.github.io |</p>
 </blockquote>
 <p><em>io后面没有”.”不要加这个”.”</em></p>
+ <center><br><h3 id="next侧边栏"><a href="#next侧边栏" class="headerlink" title="next侧边栏"></a>next侧边栏</h3><br></center>
+
+<p>想在侧边栏添加个人微信和个人微博等等的可以<br>在主题_config.yml里添加的Social Links里面的social添加代码：</p>
+<blockquote>
+<p>  weibo: <a href="http://weibo.com/zengxinxinde" target="_blank" rel="external">http://weibo.com/zengxinxinde</a><br>  zhihu: <a href="http://www.zhihu.com/people/zengxinxinde" target="_blank" rel="external">http://www.zhihu.com/people/zengxinxinde</a></p>
+<p> #自己想要的名称： <a href="http://www.你的网址.com/你的短域名" target="_blank" rel="external">http://www.你的网址.com/你的短域名</a></p>
+</blockquote>
+<p>例如：<br><img src="http://7xoxy2.com1.z0.glb.clouddn.com/%E4%B8%BE%E4%BE%8B.png" alt="举例"></p>
 <p><em>边搭建边笔记~</em></p>
 ]]></content>
     </entry>
