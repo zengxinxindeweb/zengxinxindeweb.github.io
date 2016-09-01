@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2016/08/29/%E6%90%AD%E5%BB%BAhexo/</loc>
-    <lastmod>2016-08-31T08:14:48.000Z</lastmod>
+    <lastmod>2016-09-01T06:57:25.000Z</lastmod>
     <data>
         <display>
         <title>MAC hexo 搭建笔记</title>
@@ -17,6 +17,26 @@
            
              
               <breadCrumb title="搭建笔记" url="http://yoursite.com/categories/%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/09/01/next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2016-09-01T06:54:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>next主题优化</title>
+        <pubTime>2016-09-01T04:59:05.000Z</pubTime>
+        
+        <tag>next主题优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="next优化" url="http://yoursite.com/categories/next%E4%BC%98%E5%8C%96/"/>
           
         </display>
     </data>

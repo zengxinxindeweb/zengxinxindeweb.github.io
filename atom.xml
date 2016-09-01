@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-31T08:14:48.000Z</updated>
+  <updated>2016-09-01T06:54:12.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,102 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>next主题优化</title>
+    <link href="http://yoursite.com/2016/09/01/next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2016/09/01/next主题优化/</id>
+    <published>2016-09-01T04:59:05.000Z</published>
+    <updated>2016-09-01T06:54:12.000Z</updated>
+    
+    <content type="html"><![CDATA[ <center><br><h3 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>1.安装next主题</h3><br></center>
+
+<p>你可以到Hexo官网主题页去搜寻自己喜欢的theme。这里以hexo-theme-next为例！</p>
+<p><strong>终端cd到 blog 目录下执行如下命令</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<p>将blog目录下_config.yml里theme的名称landscape修改为next</p>
+<h4 id="next 侧边栏"><a href="#next 侧边栏" class="headerlink" title="next 侧边栏"></a> next 侧边栏</h4>
+
+<p>*以下均在next主题下的_config.yml中修改，在配置文件里‘#’就是注释符，相当于C语言中的‘//’</p>
+<p>想在侧边栏添加个人微信和个人微博等等的可以<br>在主题_config.yml里添加的Social Links里面的social添加代码：</p>
+<blockquote>
+<p>  weibo: <a href="http://weibo.com/zengxinxinde" target="_blank" rel="external">http://weibo.com/zengxinxinde</a><br>  zhihu: <a href="http://www.zhihu.com/people/zengxinxinde" target="_blank" rel="external">http://www.zhihu.com/people/zengxinxinde</a></p>
+<p> #自己想要的名称： <a href="http://www.你的网址.com/你的短域名" target="_blank" rel="external">http://www.你的网址.com/你的短域名</a></p>
+</blockquote>
+<p>例如：<br><img src="http://7xoxy2.com1.z0.glb.clouddn.com/%E4%B8%BE%E4%BE%8B.png" alt="举例"></p>
+<h4 id="设置博客中代码高亮显示"><ahref="#设置博客中代码高亮显示" class="headerlink" title="设置博客中代码高亮显示">设置博客中代码高亮显示</ahref="#设置博客中代码高亮显示"></h4>
+
+<p>添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Code Highlight theme</div><div class="line"># Available value:</div><div class="line">#    normal | night | night eighties | night blue | night bright</div><div class="line"># https://github.com/chriskempson/tomorrow-theme</div><div class="line"># highlight_theme: normal</div><div class="line">  highlight_theme: night eighties</div></pre></td></tr></table></figure>
+<h4 id="添加网页计数器-不蒜子"><a href="#添加网页计数器-不蒜子" class="headerlink" title="添加网页计数器-不蒜子"></a>添加网页计数器-不蒜子</h4>
+
+<p>修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># Show PV/UV of the website/page with busuanzi.</div><div class="line"># Get more information on   http://ibruce.info/2015/04/04/busuanzi/</div><div class="line">busuanzi_count:</div><div class="line"># count values only if the other configs are false</div><div class="line">enable: true</div><div class="line"># custom uv span for the whole site</div><div class="line">site_uv: true</div><div class="line">site_uv_header: &lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;</div><div class="line">site_uv_footer: </div><div class="line"># custom pv span for the whole site</div><div class="line">site_pv: true</div><div class="line">site_pv_header: &lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt;</div><div class="line">site_pv_footer:</div><div class="line"># custom pv span for one page only</div><div class="line">page_pv: true</div><div class="line">page_pv_header: &lt;i class=&quot;fa fa-file-o&quot;&gt;&lt;/i&gt;</div><div class="line">page_pv_footer:</div></pre></td></tr></table></figure>
+<h4 id="创建分类界面"><a href="#创建分类界面" class="headerlink" title="创建分类界面"></a>创建分类界面</h4>
+
+<p>cd到blog新建一个名为categories的文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page categories</div></pre></td></tr></table></figure>
+<p>创建完成后，在对应的目录下找到index.md文件，可以直接文本形式打开，进行如下的修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: categories</div><div class="line">date: 2016-08-20 22:17:49</div><div class="line">type: &quot;categories&quot; # 将页面的类型设置为categories,主题将自动为这个页面显示所有分类</div><div class="line">comments: false # 这个是关闭评论，如果不想关闭直接删除这行</div><div class="line">---</div></pre></td></tr></table></figure>
+<h4 id="创建标签界面"><a href="#创建标签界面" class="headerlink" title="创建标签界面"></a>创建标签界面</h4>
+
+<p>cd到blog新建一个名为tags的文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page tags</div></pre></td></tr></table></figure>
+<p>创建完成后，在对应的目录下找到index.md文件，可以直接文本形式打开，进行如下的修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: tags</div><div class="line">date: 2016-08-20 22:17:49</div><div class="line">type: &quot;tags&quot; # 将页面的类型设置为tags,主题将自动为这个页面显示为标签云</div><div class="line">comments: false # 这个是关闭评论，如果不想关闭直接删除这行</div><div class="line">---</div></pre></td></tr></table></figure>
+<h4 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h4>
+
+<p></p><h5 id="配置文章"><a href="#配置文章" class="headerlink" title="配置文章"></a>配置文章</h5><br>在文章开头需要添加一些配置<p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: next优化 # 这是标题</div><div class="line">categories: next主题  # 这里写的分类会自动汇集到 categories 页面上，分类可以多级</div><div class="line">tags: next优化 # 这里写的标签会自动汇集到 tags 页面上</div></pre></td></tr></table></figure>
+<p>添加好上述配置后，就可以安心写文章了。最后，将写好的文章放到blog/source/_post目录下。</p>
+<h3 id="next添加插件"><a href="#next添加插件" class="headerlink" title="next添加插件"></a>next添加插件</h3>
+
+<h4 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h4>
+
+<p>下载：<a href="http://7xoxy2.com1.z0.glb.clouddn.com/Hexo%E8%AF%84%E8%AE%BA%E6%A8%A1%E5%9D%97.zip" target="_blank" rel="external">Hexo评论模块.zip</a>   #注册：<a href="http://duoshuo.com/create-site/" target="_blank" rel="external">多说</a> 后复制代码</p>
+<p>通用代码复制到下载下来【评论模块】里的comments文件夹中的duoshuo.ejs里面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;请将此处替换成文章在你的站点中的ID&quot; data-title=&quot;请替换成文章的标题&quot; data-url=&quot;请替换成文章的网址&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>改成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%=key%&gt;&quot; data-title=&quot;&lt;%=title%&gt;&quot; data-url=&quot;&lt;%=url%&gt;&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>最终：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;duoshuo&quot; id=&quot;comments&quot;&gt;</div><div class="line">    &lt;!-- 多说评论框 start --&gt;</div><div class="line">    &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%=key%&gt;&quot; data-title=&quot;&lt;%=title%&gt;&quot; data-url=&quot;&lt;%=url%&gt;&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;!-- 多说评论框 end --&gt;</div><div class="line">    &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var duoshuoQuery = &#123;short_name:&quot;&lt;%=theme.duoshuo.domain%&gt;&quot;&#125;;</div><div class="line">    (function() &#123;</div><div class="line">        var ds = document.createElement(&apos;script&apos;);</div><div class="line">        ds.type = &apos;text/javascript&apos;;ds.async = true;</div><div class="line">        ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;</div><div class="line">        ds.charset = &apos;UTF-8&apos;;</div><div class="line">        (document.getElementsByTagName(&apos;head&apos;)[0] </div><div class="line">         || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);</div><div class="line">    &#125;)();</div><div class="line">    &lt;/script&gt;</div><div class="line">    &lt;!-- 多说公共JS代码 end --&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>在添加配置_config.yml里面修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">duoshuo: </div><div class="line">  #on: true</div><div class="line">  domain: http://zengxinxinde.duoshuo.com  #你的多说域名</div></pre></td></tr></table></figure>
+<p>cd 到你主题next下 打开配置，duoshuo_shortname添加你的多说短域名： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Duoshuo ShortName</div><div class="line">duoshuo_shortname: zengxinxinde #你的多说短域名</div></pre></td></tr></table></figure>
+<p>  本地预览效果，可以就部署到git</p>
+  <h3 id="音乐插件"><a href="#音乐插件" class="headerlink" title="音乐插件"></a>音乐插件</h3>
+
+<p>  直接插入就可以了，不用装插件！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;vedio&gt;标签举例</div><div class="line"></div><div class="line">&lt;video width=&quot;480&quot; height=&quot;320&quot; controls&gt;</div><div class="line">&lt;source src=&quot;movie.mp4&quot;&gt;</div><div class="line">&lt;/video&gt;</div><div class="line"></div><div class="line">其中src=后面的值需要替换为自己的音乐/视频链接。</div><div class="line"></div><div class="line">&lt;embed&gt;标签举例</div><div class="line"></div><div class="line">&lt;embed src=&quot;http://player.youku.com/player.php/Type/Folder/Fid/27690810/Ob/1/sid/XMTY1MTI3NjMyNA==/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowScriptAccess=&quot;always&quot; allowFullScreen=&quot;true&quot; mode=&quot;transparent&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;/embed&gt;</div><div class="line"></div><div class="line">&lt;iframe&gt;标签举例</div><div class="line"></div><div class="line">&lt;iframe height=498 width=510 src=&quot;http://player.youku.com/embed/XMTY1MTI3NjMyNA==&quot; frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;</div><div class="line"></div><div class="line">javascript标签举例</div><div class="line"></div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.xiami.com/widget/player-single?uid=32329501&amp;sid=1776238762&amp;mode=js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+ <h3 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h3>
+
+<p>复制百度统计代码到:</p>
+<blockquote>
+<p>themes\next\layout_partials\footer.swig #复制到最底部就可以了</p>
+</blockquote>
+<p>有时间在更新了，先撤了~</p>
+]]></content>
+    
+    <summary type="html">
+    
+       &lt;center&gt;&lt;br&gt;&lt;h3 id=&quot;安装next主题&quot;&gt;&lt;a href=&quot;#安装next主题&quot; class=&quot;headerlink&quot; title=&quot;安装next主题&quot;&gt;&lt;/a&gt;1.安装next主题&lt;/h3&gt;&lt;br&gt;&lt;/center&gt;
+
+&lt;p&gt;你可以到Hexo官网主题页去搜寻
+    
+    </summary>
+    
+      <category term="next优化" scheme="http://yoursite.com/categories/next%E4%BC%98%E5%8C%96/"/>
+    
+    
+      <category term="next主题优化" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MAC hexo 搭建笔记</title>
     <link href="http://yoursite.com/2016/08/29/%E6%90%AD%E5%BB%BAhexo/"/>
     <id>http://yoursite.com/2016/08/29/搭建hexo/</id>
     <published>2016-08-29T05:24:24.000Z</published>
-    <updated>2016-08-31T08:14:48.000Z</updated>
+    <updated>2016-09-01T06:57:25.000Z</updated>
     
     <content type="html"><![CDATA[<!-- toc -->
 <p>这是一篇粗略的文章来讲述用Mac搭建Hexo博客于Github上的个人历程， 踩了各种的坑搭起来的，现在写下遇到的一些问题来分享和自己做个笔记，希望能帮大家少踩些坑。</p>
@@ -29,13 +120,18 @@
 <a id="more"></a>
 <center><br><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><br></center>
 
-<p> <strong>Node.js</strong><br>直接下载安装就可以<a href="https://nodejs.org/en/%20%E2%80%9CNode.js" target="_blank" rel="external">Node.js官网</a><br><strong>Git</strong><br>MAC电脑自带有😄 不用安装.用来将本地Hexo内容克隆到Github上。</p>
-<center><br><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><br></center>
+ <h4 id="Node.js"><a href="#Node.js" class="headerlink" title="Node.js"></a>Node.js</h4>
+
+<p>直接下载安装就可以<a href="https://nodejs.org/en/%20%E2%80%9CNode.js" target="_blank" rel="external">Node.js官网</a></p>
+<h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4>
+
+<p>MAC电脑自带有(๑•̀ㅂ•́)✧ 不用安装.用来将本地Hexo内容克隆到Github上。</p>
+<center><br><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><br></center>
 
 <p>安装好上面两个了就可以在终端执行命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g hexo</div></pre></td></tr></table></figure>
 <p>输入管理员密码（Mac登录密码）即开始安装 (sudo:linux系统管理指令 -g:全局安装)</p>
-<center><br><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><br></center>
+<center><br><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><br></center>
 
 <p>终端cd到一个想要的目录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd /xx/xx 回车</div></pre></td></tr></table></figure>
@@ -47,24 +143,33 @@
 <p>执行命令，开启hexo服务器：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s  或者 $ hexo server</div></pre></td></tr></table></figure>
 <p>浏览器中打开网址<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 进行测试！</p>
- <center><br> <h3 id="修改_config.yml"><a href="#修改_config.yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3><br> </center>
+ <center><br> <h3 id="关联Github"><a href="#关联Github" class="headerlink" title="关联Github"></a>关联Github</h3><br> </center>
 
-<p>cd到blog目录</p>
-<p>打开命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure></p>
-<p>修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-<p>修改好后esc然后切换小写输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:wq!</div></pre></td></tr></table></figure>
-<p>清除缓存文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo clean</div></pre></td></tr></table></figure></p>
-<p>在blog文件夹目录下执行生成静态页面命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo g  或者 $ generate</div><div class="line">          然后</div><div class="line">$ hexo d  或者 $ hexo deploy</div></pre></td></tr></table></figure></p>
-<p>同步生成静态页面与执行配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d -g</div></pre></td></tr></table></figure></p>
+<h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><br><br><br>登录你的Github帐号，新建仓库，名为用户名.github.io固定写法，如zengxinxinde.github.io即下图中1所示：<br><img src="http://7xoxy2.com1.z0.glb.clouddn.com/git.png" alt="示例"><br><br>终端cd到blog目录打开命令：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure><br><br>拉到最后，修改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:https://zengxinxinde/zengxinxinde/gonghonglou.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure><br><br>你需要将repository后gonghonglou换成你自己的用户名。<br>&gt;在配置所有的_config.yml文件时（包括theme中的），在所有的冒号:后边都要加一个空格，否则执行hexo命令会报错!<br><br>修改好后esc然后切换小写输入命令：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:wq!</div></pre></td></tr></table></figure><br><br>清除缓存文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo clean</div></pre></td></tr></table></figure><br><br>在blog文件夹目录下执行生成静态页面命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g  或者 $ generate</div></pre></td></tr></table></figure><br><br>然后再执行配置命令：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d  或者 $ hexo deploy</div></pre></td></tr></table></figure><br><br><code>hexo deploy</code>命令执行成功后，浏览器中打开网址<a href="http://zengxinxinde.github.io（将gonghonglou换成你的用户名）能看到和打开http://localhost:4000时一样的页面。" target="_blank" rel="external">http://zengxinxinde.github.io（将gonghonglou换成你的用户名）能看到和打开http://localhost:4000时一样的页面。</a><br><br> <h5 id="添加ssh key到Github"><a href="#添加ssh key到Github" class="headerlink" title="添加ssh key到Github"></a>添加ssh key到Github</h5><br><br><strong>检查SSH keys是否存在Github</strong><br>执行如下命令，检查SSH keys是否存在。如果有文件id_rsa.pub或id_dsa.pub，直接进入步骤将SSH key添加到Github中，否则生成SSH key<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ls -al ~/.ssh</div></pre></td></tr></table></figure><br><br><h5 id="生成新的key"><a href="#生成新的key" class="headerlink" title="生成新的key"></a>生成新的ssh key</h5><br><br>执行如下命令生成public/private rsa key pair，注意将zengxinxinde@example.com换成你自己注册Github的邮箱地址<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;zengxinxinde@example.com&quot;</div></pre></td></tr></table></figure><br><br>默认会在相应路径下（~/.ssh/id_rsa.pub）生成id_rsa和id_rsa.pub两个文件。<br><br><h4 id="key添加到Github"><a href="#key添加到Github" class="headerlink" title="key添加到Github"></a>key添加到Github</h4>
+
+<p>Find前往文件夹~/.ssh/id_rsa.pub打开id_rsa.pub文件，里面的信息即为SSH key，将这些信息复制到Github的Add SSH key页面即可。</p>
+<blockquote>
+<p>进入Github –&gt; Settings –&gt; SSH keys –&gt; add SSH key:</p>
+</blockquote>
+<p>Title里任意添一个标题，将复制的内容粘贴到Key里，点击下方Add key绿色按钮即可.</p>
 <center><br><h3 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h3><br></center>
 
+<p>终端cd到blog文件夹下，执行如下命令新建文章<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new hello</div></pre></td></tr></table></figure></p>
+<p>名为<code>hello.md</code>的文件会建在目录/blog/source/_posts下，hello是文件名</p>
 <p>在MAC markdown编辑写文章目录使用ID 自带的不好用- -<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h3 id=“标题”&gt;&lt;a href="#标题" class="headerlink" title="标题"&gt;&lt;/a&gt;标题&lt;<span class="regexp">/h3&gt;</span></div></pre></td></tr></table></figure></p>
 <p>想给文章不显示全文的话可以在自己想要设置的地方添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!— more --&gt;</div></pre></td></tr></table></figure>
- <center><br><h3 id="万网配置"><a href="#万网配置" class="headerlink" title="万网配置"></a>万网配置</h3><br> </center>
+<p>文章编辑完成后，终端cd到blog文件夹下，执行如下命令来发布<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g     #同时生成静态文件和部署到Github</div></pre></td></tr></table></figure></p>
+<center><br><h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><br></center>
 
+<h4 id="Github端"><a href="#Github端" class="headerlink" title="Github端"></a>Github端</h4>
+
+<p>在/blog/themes/next/source目录下新建文件名为：CNAME文件，注意没有后缀名！直接将自己的域名如：zengxinxinde.com写到文件里</p>
 <blockquote>
+<p>用于github里的”设置Settings”下面的“GitHub Pages”里的“Custom domain”，也可以不嫌麻烦的自己修改自定义域名</p>
+<h4 id="万网配置"><a href="#万网配置" class="headerlink" title="万网配置"></a>万网配置</h4>
+
+
 <table>
 <thead>
 <tr>
@@ -89,17 +194,10 @@
 </tr>
 </tbody>
 </table>
+<p>此时，点击访问<a href="http://zengxinxinde.com和访问http://zengxinxinde.github.io效果一致。" target="_blank" rel="external">http://zengxinxinde.com和访问http://zengxinxinde.github.io效果一致。</a></p>
 </blockquote>
 <p><em>io后面没有”.”不要加这个”.”</em></p>
- <center><br><h3 id="next侧边栏"><a href="#next侧边栏" class="headerlink" title="next侧边栏"></a>next侧边栏</h3><br></center>
-
-<p>想在侧边栏添加个人微信和个人微博等等的可以<br>在主题_config.yml里添加的Social Links里面的social添加代码：</p>
-<blockquote>
-<p>  weibo: <a href="http://weibo.com/zengxinxinde" target="_blank" rel="external">http://weibo.com/zengxinxinde</a><br>  zhihu: <a href="http://www.zhihu.com/people/zengxinxinde" target="_blank" rel="external">http://www.zhihu.com/people/zengxinxinde</a></p>
-<p> #自己想要的名称： <a href="http://www.你的网址.com/你的短域名" target="_blank" rel="external">http://www.你的网址.com/你的短域名</a></p>
-</blockquote>
-<p>例如：<br><img src="http://7xoxy2.com1.z0.glb.clouddn.com/%E4%B8%BE%E4%BE%8B.png" alt="举例"></p>
-<p><em>边搭建边笔记~</em></p>
+<p>关于添加next主题和优化的请看下一篇文章:<a href="http://zengxinxinde.com/2016/09/01/next主题优化/" target="_blank" rel="external">next主题优化</a></p>
 ]]></content>
     
     <summary type="html">
