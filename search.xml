@@ -6,13 +6,14 @@
     <entry>
       <title><![CDATA[next主题优化]]></title>
       <url>http://yoursite.com/2016/09/01/next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
-      <content type="html"><![CDATA[ <center><br><h3 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>1.安装next主题</h3><br></center>
+      <content type="html"><![CDATA[<!-- toc -->
+ <center><br><h3 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>1.安装next主题</h3><br></center>
 
 <p>你可以到Hexo官网主题页去搜寻自己喜欢的theme。这里以hexo-theme-next为例！</p>
 <p><strong>终端cd到 blog 目录下执行如下命令</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
 <p>将blog目录下_config.yml里theme的名称landscape修改为next</p>
-<p>&lt;!— more –&gt;</p>
+<a id="more"></a>
 <h4 id="next 侧边栏"><a href="#next 侧边栏" class="headerlink" title="next 侧边栏"></a> next 侧边栏</h4>
 
 <p>*以下均在next主题下的_config.yml中修改，在配置文件里‘#’就是注释符，相当于C语言中的‘//’</p>
